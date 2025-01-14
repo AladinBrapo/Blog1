@@ -7,7 +7,7 @@ image: AladinBrapo/Blog1
 # Deploy to these servers.
 servers:
   web:
-    - 83.212.126.14
+    - 83.212.126.128
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -88,8 +88,8 @@ builder:
   #   - RAILS_MASTER_KEY
 
 # Use a different ssh user than root
-# ssh:
-#   user: app
+ ssh:
+  user: user
 
 # Use accessory services (secrets come from .kamal/secrets).
 # accessories:
