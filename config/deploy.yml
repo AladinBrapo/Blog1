@@ -7,7 +7,7 @@ image: AladinBrapo/Blog1
 # Deploy to these servers.
 servers:
   web:
-    - 83.212.126.128
+    - 83.212.126.118
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -26,7 +26,6 @@ registry:
   # Specify the registry server, if you're not using Docker Hub
   server: ghcr.io
   username: AladinBrapo
-
   # Always use an access token rather than real password when possible.
   password:
     - GITHUB_TOKEN
@@ -61,12 +60,10 @@ aliases:
   logs: app logs -f
   dbc: app exec --interactive --reuse "bin/rails dbconsole"
 
-
 # Use a persistent storage volume for sqlite database files and local Active Storage files.
 # Recommended to change this to a mounted volume path that is backed up off server.
 volumes:
   - "blog_storage:/rails/storage"
-
 
 # Bridge fingerprinted assets, like JS and CSS, between versions to avoid
 # hitting 404 on in-flight requests. Combines all files from new and old
@@ -88,7 +85,7 @@ builder:
   #   - RAILS_MASTER_KEY
 
 # Use a different ssh user than root
- ssh:
+ssh:
   user: user
 
 # Use accessory services (secrets come from .kamal/secrets).
